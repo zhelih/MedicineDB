@@ -58,6 +58,7 @@ public class HelloSwing {
 		
 		JTable table = new JTable(tables);
 		table.setAutoCreateRowSorter(true);
+		//table.getModel().addTableModelListener(new ChangeListener());
 		JScrollPane scroll = new JScrollPane(table);
 		frame.getContentPane().add(scroll);
 		//final JLabel label = new JLabel("Hello Swing bla");
