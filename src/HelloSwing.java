@@ -5,13 +5,13 @@ import java.util.*;
 public class HelloSwing {
 
 	public static void main(String[] args) {
-		String url = "jdbc:db2://127.0.0.1:50000/SAMPLE";
+		String url = "jdbc:db2://127.0.0.1:50000/Medicine";
 		String user = "db2admin";
 		String password = "db2admin";
 		Connection conn = null;
 		List<String> data_tables = new ArrayList<String>();
 		List<String> data_owners = new ArrayList<String>();
-		
+		TableModel tables = null;
 		try {
 			// Load the DB2 JDBC Type 2 Driver with DriverManager
 			// Attention!!!
@@ -27,9 +27,9 @@ public class HelloSwing {
 
 			Statement st = conn.createStatement();
 			//ResultSet rs = st.executeQuery("select INST_NAME from SYSIBMADM.ENV_INST_INFO");
-			ResultSet rs = st.executeQuery("select tabname, owner from syscat.tables where type=\'T\'");
+			ResultSet rs = st.executeQuery("select tabname, owner from syscat.tables where owner = \'DB2ADMIN\'");
 			System.out.printf("done\n");
-			
+			tables = new TableModel(conn);
 			while(rs.next())
 			{
 				data_tables.add(rs.getString(1));
@@ -38,6 +38,7 @@ public class HelloSwing {
 			/* do some work */
 			conn.commit();
 			conn.close();
+			System.out.print("Connection closed\n");
 		}
 		catch (Exception e) {
 			e.printStackTrace();
@@ -45,7 +46,7 @@ public class HelloSwing {
 		
 		
 		
-		String head[] = { "Table name", "Owner" };
+		//String head[] = { "Table name", "Owner" };
 		JFrame frame = new JFrame("HelloSwing");
 		Object [][] array = new Object[data_tables.size()][2];
 		int i;
@@ -55,7 +56,8 @@ public class HelloSwing {
 			array[i][1] = data_owners.get(i);
 		}
 		
-		JTable table = new JTable(array, head);
+		JTable table = new JTable(tables);
+		table.setAutoCreateRowSorter(true);
 		JScrollPane scroll = new JScrollPane(table);
 		frame.getContentPane().add(scroll);
 		//final JLabel label = new JLabel("Hello Swing bla");
