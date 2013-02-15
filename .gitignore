@@ -1,6 +1,10 @@
+# Java #
 *.class
 
 # Package Files #
 *.jar
 *.war
 *.ear
+
+# C++ object fil #
+*.o
