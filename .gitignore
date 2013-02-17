@@ -8,3 +8,11 @@
 
 # C++ object fil #
 *.o
+
+*.user
+Makefile*
+*.exe
+
+#Qt
+*.user
+*.pro.user
