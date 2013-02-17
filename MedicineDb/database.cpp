@@ -11,7 +11,7 @@ void connectdb2()
     db.setHostName("127.0.0.1");
     db.setPort(50000);
     db.setDatabaseName("SAMPLE");
-    db.setUserName("db2admin");
+    db.setUserName("db2admin");//blabla
     db.setPassword("db2admin");
 
     if(!db.open())
