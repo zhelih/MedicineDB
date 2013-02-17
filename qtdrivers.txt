@@ -1,0 +1,3 @@
+
+ C:\Qt\Qt5.0.1\5.0.1\mingw47_32\bin\qmake "INCLUDEPATH+=C:\Program Files\IBM\sqllib\include" "LIBS+=C:\Program Files\IBM\sqllib\lib\db2cli.lib"
+ nmake
