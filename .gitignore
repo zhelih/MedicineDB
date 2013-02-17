@@ -10,7 +10,7 @@
 *.o
 
 *.user
-Makefile*
+Makefile
 *.exe
 
 #Qt
