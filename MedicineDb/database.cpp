@@ -4,7 +4,7 @@
 #include <QtSql/QDB2Result>
 #include <QtSql/QtSql>
 #include <QMessageBox>
-
+// TEST COMMENTARY
 void connectdb2()
 {
     QSqlDatabase db = QSqlDatabase::addDatabase("QDB2"); //use db2 driver
