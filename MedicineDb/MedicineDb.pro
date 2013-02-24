@@ -14,9 +14,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    database.cpp
+    logindialog.cpp
 
 HEADERS  += mainwindow.h \
-    database.h
+    logindialog.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    logindialog.ui
+
+#LIBS += C:\Qt\Qt5.0.1\5.0.1\Src\qtbase\plugins\sqldrivers\libqsqldb2.a
+#LIBS += C:\Qt\Qt5.0.1\5.0.1\Src\qtbase\plugins\sqldrivers\libqsqldb2d.a
