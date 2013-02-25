@@ -96,13 +96,13 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Medicine database admin client", 0));
-        groupBox->setTitle(QApplication::translate("MainWindow", "Edit Tools", 0));
-        pushButton_3->setText(QApplication::translate("MainWindow", "Insert", 0));
-        pushButton_4->setText(QApplication::translate("MainWindow", "Delete", 0));
-        groupBox_2->setTitle(QApplication::translate("MainWindow", "Mirror", 0));
-        pushButton->setText(QApplication::translate("MainWindow", "Submit", 0));
-        pushButton_2->setText(QApplication::translate("MainWindow", "Revert", 0));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "\320\232\320\273\321\226\321\224\320\275\321\202 \320\260\320\264\320\274\321\226\320\275\321\226\321\201\321\202\321\200\320\260\321\206\321\226\321\227 \320\261\320\264 \320\234\320\265\320\264\320\270\321\206\320\270\320\275\320\260", 0));
+        groupBox->setTitle(QApplication::translate("MainWindow", "\320\240\320\265\320\264\320\260\320\263\321\203\320\262\320\260\320\275\320\275\321\217", 0));
+        pushButton_3->setText(QApplication::translate("MainWindow", "\320\222\321\201\321\202\320\260\320\262\320\270\321\202\320\270", 0));
+        pushButton_4->setText(QApplication::translate("MainWindow", "\320\222\320\270\320\264\320\260\320\273\320\270\321\202\320\270", 0));
+        groupBox_2->setTitle(QApplication::translate("MainWindow", "\320\232\320\265\321\210\321\203\320\262\320\260\320\275\320\275\321\217", 0));
+        pushButton->setText(QApplication::translate("MainWindow", "\320\237\321\226\320\264\321\202\320\262\320\265\321\200\320\264\320\270\321\202\320\270", 0));
+        pushButton_2->setText(QApplication::translate("MainWindow", "\320\222\321\226\320\264\320\272\320\260\321\202", 0));
     } // retranslateUi
 
 };

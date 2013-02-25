@@ -38,7 +38,7 @@ void Dialog::accept()
 
     if(!ptr_db->open())
     {
-        QMessageBox::information(this, "Error", QString("Error: %1").arg(ptr_db->lastError().text()));
+        QMessageBox::information(this, "Помилка", QString("Помилка: %1").arg(ptr_db->lastError().text()));
     }
     else
         QDialog::accept();

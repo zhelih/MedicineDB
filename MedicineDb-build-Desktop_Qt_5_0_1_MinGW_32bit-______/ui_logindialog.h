@@ -46,10 +46,10 @@ public:
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
         label = new QLabel(Dialog);
         label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(30, 60, 46, 13));
+        label->setGeometry(QRect(20, 60, 46, 13));
         label_2 = new QLabel(Dialog);
         label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(30, 90, 51, 16));
+        label_2->setGeometry(QRect(20, 90, 51, 16));
         lineEdit = new QLineEdit(Dialog);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
         lineEdit->setGeometry(QRect(100, 60, 241, 20));
@@ -59,7 +59,7 @@ public:
         lineEdit_2->setEchoMode(QLineEdit::Password);
         label_3 = new QLabel(Dialog);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(30, 30, 61, 16));
+        label_3->setGeometry(QRect(20, 30, 71, 16));
         lineEdit_3 = new QLineEdit(Dialog);
         lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
         lineEdit_3->setGeometry(QRect(100, 30, 61, 20));
@@ -83,11 +83,11 @@ public:
 
     void retranslateUi(QDialog *Dialog)
     {
-        Dialog->setWindowTitle(QApplication::translate("Dialog", "Login dialog", 0));
-        label->setText(QApplication::translate("Dialog", "Login:", 0));
-        label_2->setText(QApplication::translate("Dialog", "Password:", 0));
+        Dialog->setWindowTitle(QApplication::translate("Dialog", "\320\224\321\226\320\260\320\273\320\276\320\263 \320\273\320\276\320\263\321\226\320\275\321\203", 0));
+        label->setText(QApplication::translate("Dialog", "\320\233\320\276\320\263\321\226\320\275:", 0));
+        label_2->setText(QApplication::translate("Dialog", "\320\237\320\260\321\200\320\276\320\273\321\214:", 0));
         lineEdit->setText(QApplication::translate("Dialog", "db2admin", 0));
-        label_3->setText(QApplication::translate("Dialog", "Database:", 0));
+        label_3->setText(QApplication::translate("Dialog", "\320\221\320\260\320\267\320\260 \320\264\320\260\320\275\320\275\320\270\321\205:", 0));
         lineEdit_3->setText(QApplication::translate("Dialog", "127.0.0.1", 0));
         lineEdit_4->setText(QApplication::translate("Dialog", "50000", 0));
         lineEdit_5->setText(QApplication::translate("Dialog", "Medicine", 0));

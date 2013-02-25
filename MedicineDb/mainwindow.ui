@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Medicine database admin client</string>
+   <string>Клієнт адміністрації бд Медицина</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QTableView" name="tableView">
@@ -59,7 +59,7 @@
      </rect>
     </property>
     <property name="title">
-     <string>Edit Tools</string>
+     <string>Редагування</string>
     </property>
     <widget class="QPushButton" name="pushButton_3">
      <property name="geometry">
@@ -71,7 +71,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Insert</string>
+      <string>Вставити</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_4">
@@ -84,7 +84,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Delete</string>
+      <string>Видалити</string>
      </property>
     </widget>
    </widget>
@@ -98,7 +98,7 @@
      </rect>
     </property>
     <property name="title">
-     <string>Mirror</string>
+     <string>Кешування</string>
     </property>
     <widget class="QPushButton" name="pushButton">
      <property name="geometry">
@@ -110,7 +110,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Submit</string>
+      <string>Підтвердити</string>
      </property>
     </widget>
     <widget class="QPushButton" name="pushButton_2">
@@ -123,7 +123,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>Revert</string>
+      <string>Відкат</string>
      </property>
     </widget>
    </widget>

@@ -26,7 +26,7 @@ void MainWindow::init()
 {
     QStringList tables = db2->tables();
     QStandardItemModel* model = new QStandardItemModel(tables.length(),1,this);
-    model->setHorizontalHeaderItem(0,new QStandardItem(QString("Tables")));
+    model->setHorizontalHeaderItem(0,new QStandardItem(QString("Таблиці")));
     for(int i=0; i<tables.length();++i)
     {
         model->setItem(i,0,new QStandardItem(QString(tables[i])));
@@ -53,7 +53,7 @@ void MainWindow::sql_submit()
     emit model_sql->submitAll();
     if(model_sql->lastError().type() != (QSqlError::NoError))
     {
-        QMessageBox::information(this, "Error", model_sql->lastError().text());
+        QMessageBox::information(this, "Помилка", model_sql->lastError().text());
         emit model_sql->revertAll();
     }
 }
