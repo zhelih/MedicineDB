@@ -16,6 +16,7 @@
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QTableView>
@@ -27,6 +28,10 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+    QAction *action_1;
+    QAction *action_2;
+    QAction *action_3;
+    QAction *action_4;
     QWidget *centralWidget;
     QTableView *tableView;
     QTableView *tableView_2;
@@ -37,6 +42,8 @@ public:
     QPushButton *pushButton;
     QPushButton *pushButton_2;
     QMenuBar *menuBar;
+    QMenu *menu;
+    QMenu *menu_2;
     QToolBar *mainToolBar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -44,6 +51,14 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
         MainWindow->resize(662, 401);
+        action_1 = new QAction(MainWindow);
+        action_1->setObjectName(QStringLiteral("action_1"));
+        action_2 = new QAction(MainWindow);
+        action_2->setObjectName(QStringLiteral("action_2"));
+        action_3 = new QAction(MainWindow);
+        action_3->setObjectName(QStringLiteral("action_3"));
+        action_4 = new QAction(MainWindow);
+        action_4->setObjectName(QStringLiteral("action_4"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         tableView = new QTableView(centralWidget);
@@ -79,10 +94,22 @@ public:
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
         menuBar->setGeometry(QRect(0, 0, 662, 21));
+        menu = new QMenu(menuBar);
+        menu->setObjectName(QStringLiteral("menu"));
+        menu_2 = new QMenu(menuBar);
+        menu_2->setObjectName(QStringLiteral("menu_2"));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
         MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
+
+        menuBar->addAction(menu->menuAction());
+        menuBar->addAction(menu_2->menuAction());
+        menu->addSeparator();
+        menu->addAction(action_1);
+        menu->addAction(action_2);
+        menu_2->addAction(action_3);
+        menu_2->addAction(action_4);
 
         retranslateUi(MainWindow);
         QObject::connect(tableView, SIGNAL(doubleClicked(QModelIndex)), MainWindow, SLOT(open_table(QModelIndex)));
@@ -97,12 +124,18 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "\320\232\320\273\321\226\321\224\320\275\321\202 \320\260\320\264\320\274\321\226\320\275\321\226\321\201\321\202\321\200\320\260\321\206\321\226\321\227 \320\261\320\264 \320\234\320\265\320\264\320\270\321\206\320\270\320\275\320\260", 0));
+        action_1->setText(QApplication::translate("MainWindow", "\320\242\320\260\320\261\320\273\320\270\321\206\321\2171", 0));
+        action_2->setText(QApplication::translate("MainWindow", "\320\242\320\260\320\261\320\273\320\270\321\206\321\2172", 0));
+        action_3->setText(QApplication::translate("MainWindow", "\320\224\320\276\320\262\321\226\320\264\320\275\320\270\320\2721", 0));
+        action_4->setText(QApplication::translate("MainWindow", "\320\224\320\276\320\262\321\226\320\264\320\275\320\270\320\2722", 0));
         groupBox->setTitle(QApplication::translate("MainWindow", "\320\240\320\265\320\264\320\260\320\263\321\203\320\262\320\260\320\275\320\275\321\217", 0));
         pushButton_3->setText(QApplication::translate("MainWindow", "\320\222\321\201\321\202\320\260\320\262\320\270\321\202\320\270", 0));
         pushButton_4->setText(QApplication::translate("MainWindow", "\320\222\320\270\320\264\320\260\320\273\320\270\321\202\320\270", 0));
         groupBox_2->setTitle(QApplication::translate("MainWindow", "\320\232\320\265\321\210\321\203\320\262\320\260\320\275\320\275\321\217", 0));
         pushButton->setText(QApplication::translate("MainWindow", "\320\237\321\226\320\264\321\202\320\262\320\265\321\200\320\264\320\270\321\202\320\270", 0));
         pushButton_2->setText(QApplication::translate("MainWindow", "\320\222\321\226\320\264\320\272\320\260\321\202", 0));
+        menu->setTitle(QApplication::translate("MainWindow", "\320\223\320\276\320\273\320\276\320\262\320\275\321\226 \321\202\320\260\320\261\320\273\320\270\321\206\321\226", 0));
+        menu_2->setTitle(QApplication::translate("MainWindow", "\320\224\320\276\320\262\321\226\320\264\320\275\320\270\320\272\320\270", 0));
     } // retranslateUi
 
 };
