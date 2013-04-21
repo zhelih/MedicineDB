@@ -14,6 +14,10 @@ EditDialog::EditDialog(mySqlTableModel* m, int row, QWidget *parent) :
     ui->setupUi(this);
     editmodel = new EditModel(m, row, this);
     ui->tableView->setModel(editmodel);
+    ui->tableView->horizontalHeader()->reset();
+    ui->tableView->horizontalHeader()->resizeSections(QHeaderView::ResizeToContents);
+    emit ui->tableView->repaint();
+
     model_sql = m;
     row_ = row;
 }
