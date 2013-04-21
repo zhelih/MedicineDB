@@ -13,6 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
+#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QDialogButtonBox>
 #include <QtWidgets/QHeaderView>
@@ -33,12 +34,18 @@ public:
     QLineEdit *lineEdit_3;
     QLineEdit *lineEdit_4;
     QLineEdit *lineEdit_5;
+    QCheckBox *checkBox;
 
     void setupUi(QDialog *Dialog)
     {
         if (Dialog->objectName().isEmpty())
             Dialog->setObjectName(QStringLiteral("Dialog"));
-        Dialog->resize(361, 163);
+        Dialog->setWindowModality(Qt::ApplicationModal);
+        Dialog->resize(360, 160);
+        Dialog->setMinimumSize(QSize(360, 160));
+        Dialog->setMaximumSize(QSize(360, 160));
+        Dialog->setSizeGripEnabled(false);
+        Dialog->setModal(false);
         buttonBox = new QDialogButtonBox(Dialog);
         buttonBox->setObjectName(QStringLiteral("buttonBox"));
         buttonBox->setGeometry(QRect(40, 120, 301, 32));
@@ -55,7 +62,7 @@ public:
         lineEdit->setGeometry(QRect(100, 60, 241, 20));
         lineEdit_2 = new QLineEdit(Dialog);
         lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
-        lineEdit_2->setGeometry(QRect(100, 90, 241, 20));
+        lineEdit_2->setGeometry(QRect(100, 90, 121, 20));
         lineEdit_2->setEchoMode(QLineEdit::Password);
         label_3 = new QLabel(Dialog);
         label_3->setObjectName(QStringLiteral("label_3"));
@@ -73,6 +80,11 @@ public:
         lineEdit_5->setObjectName(QStringLiteral("lineEdit_5"));
         lineEdit_5->setGeometry(QRect(240, 30, 101, 20));
         lineEdit_5->setReadOnly(true);
+        checkBox = new QCheckBox(Dialog);
+        checkBox->setObjectName(QStringLiteral("checkBox"));
+        checkBox->setGeometry(QRect(240, 90, 101, 17));
+        checkBox->setChecked(true);
+        checkBox->setTristate(false);
 
         retranslateUi(Dialog);
         QObject::connect(buttonBox, SIGNAL(accepted()), Dialog, SLOT(accept()));
@@ -91,6 +103,7 @@ public:
         lineEdit_3->setText(QApplication::translate("Dialog", "127.0.0.1", 0));
         lineEdit_4->setText(QApplication::translate("Dialog", "50000", 0));
         lineEdit_5->setText(QApplication::translate("Dialog", "Medicine", 0));
+        checkBox->setText(QApplication::translate("Dialog", "\320\240\320\265\320\266\320\270\320\274 \320\260\320\264\320\274\321\226\320\275\320\260", 0));
     } // retranslateUi
 
 };

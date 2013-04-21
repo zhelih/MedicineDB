@@ -19,6 +19,7 @@ int main(int argc, char *argv[])
         w.set_database(&db);
         w.init();
         w.show();
+        w.set_mode(login_dialog.is_checked());
     }
     else
     {

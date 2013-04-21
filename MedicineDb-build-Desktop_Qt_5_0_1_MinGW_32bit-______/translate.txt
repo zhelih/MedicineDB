@@ -1,0 +1,133 @@
+Medical_institution Медичні установи
+id_Institution Код установи
+Address Адреса
+Phone_number_of_pigeon_hole Телефон приймального відділення
+Licence_number Номер ліцензії
+Name Назва
+
+Staff Персонал
+id_Staff Код персоналу
+Last_name Прізвище
+First_name Ім'я 
+Fathers_name По батькові
+MDorS МДчиГОП
+Post Посада
+Salary Заробітна плата
+Num_of_diploma Номер димлома
+Academic_degree Наукове звання
+id_Institution Код установи
+id_Leave Код відпустки
+
+Patient Пацієнти
+id_Patient Код пацієнта
+Last_name Прізвище
+First_name Ім'я 
+Fathers_name По батькові
+Date_of_birth Дата народження
+id_Institution Код установи
+
+Supplier Постачальники
+id_Supplier Код постачальника
+Date_of_making_of_contract Дата укладення договору
+Name Назва
+
+Medicine Медикаменти
+id_Medicine Код медикамента
+Name Назва
+Quantity Кількість
+id_Unit Код одиниці вимірювання
+id_Condition Код стану
+id_Supplier Код постачальника
+
+Equipment Обладнання
+id_Equipment Код обладнання
+Name Назва
+Quantity Кількість
+id_Condition Код стану
+id_Supplier Код постачальника
+
+Survey Обстеження
+id_Survey Код обстеження
+Date Дата
+id_Equipment Код обладнання
+id_Survey_type Код типу обстеження
+
+Application_timetable Розклад прийняття ліків
+id_Timetable Код розкладу
+Date Дата
+Quantity Кількість
+id_Staff Код персоналу
+id_Patient Код пацієнта
+
+Cycle_of_patient Цикли пацієнтів
+id_Cycle Код циклу 
+Date_of_admission Дата звернення
+Date_of_leaving Дата вибуття
+id_Patient Код пацієнта
+
+Medical_history Історії хвороб
+id_History Код історії
+id_Staff Код персоналу
+id_Cycle Код циклу
+id_Traced_operation Код проведеної операції
+id_Traced_survey Код проведеного обстеження
+
+Operation Операції
+id_Operation Код операції
+Date Дата
+id_Operation_type Код типу операції
+
+Leave Відпустка
+id_Leave Код відпустки
+Name Назва
+Term Тривалість
+
+Custom Замовлення
+id_Institution Код установи
+id_Supplier Код постачальника
+
+Operation_type Тип операції
+id_Operation_type Код типу операції
+Name Назва
+
+Survey_type Тип обстеження
+id_Survey_type Код типу обстеження
+Name Назва
+
+Survey_of_patient Обстеження пацієнтів
+id_Patient Код пацієнта
+id_Survey Код обстеження
+
+Traced_survey Проведені обстеження
+id_Traced_survey Код проведеного обстеження
+id_Survey Код обстеження
+id_Staff Код персоналу
+
+Traced_operation Проведені операції
+id_Traced_operation Код проведеної операції
+id_Staff Код персоналу
+id_Operation Код операції
+
+Illness Хвороби
+id_Illness Код хвороби
+Name Назва
+
+Illness_in_history Хвороби в історіях
+id_History Код історії
+id_Illness Код хвороби
+
+Patient_service Обслуговування пацієнтів
+id_Patient Код пацієнта
+id_Staff Код персоналу
+
+Given_medicine Видані медикаменти
+id_Medicine Код медикамента
+id_Timetable Код розкладу
+
+Condition Стан
+id_Condition Код стану
+Name Назва
+
+Unit Одиниці вимірювання ліків
+id_Unit Код одиниці вимірювання
+Name Назва

@@ -43,3 +43,8 @@ void Dialog::accept()
     else
         QDialog::accept();
 }
+
+bool Dialog::is_checked()
+{
+    return ui->checkBox->isChecked();
+}

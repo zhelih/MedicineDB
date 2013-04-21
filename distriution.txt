@@ -1,0 +1,30 @@
+g - general
+d - dovidyks (id - name)
+c - concat
+
+c
+c    open_table("PATIENT_SERVICE"); пациент - персонал
+c    open_table("SURVEY_OF_PATIENT"); пац - обстеження
+c    open_table("ILLNESS_IN_HISTORY");истории - хвороби
+c    open_table("CUSTOM");установи - постачальники
+c    open_table("GIVEN_MEDICINE");медикаменти - розклад
+
+d
+d    open_table("OPERATION_TYPE");
+d    open_table("SURVEY_TYPE");
+d    open_table("UNIT");
+d    open_table("LEAVE");
+d    open_table("CONDITION");
+d    open_table("ILLNESS");
+
+g
+g    open_table("SUPPLIER");
+g    open_table("TRACED_SURVEY");
+g    open_table("OPERATION");
+g    open_table("EQUIPMENT");
+g    open_table("MEDICINE");
+
+
+
+
+

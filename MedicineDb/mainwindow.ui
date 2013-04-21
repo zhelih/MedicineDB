@@ -7,126 +7,198 @@
     <x>0</x>
     <y>0</y>
     <width>662</width>
-    <height>401</height>
+    <height>408</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>662</width>
+    <height>408</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>Клієнт адміністрації бд Медицина</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QTableView" name="tableView">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>211</width>
-      <height>311</height>
-     </rect>
-    </property>
-    <property name="editTriggers">
-     <set>QAbstractItemView::NoEditTriggers</set>
-    </property>
-    <property name="sortingEnabled">
-     <bool>true</bool>
-    </property>
-    <attribute name="horizontalHeaderStretchLastSection">
-     <bool>false</bool>
-    </attribute>
-   </widget>
-   <widget class="QTableView" name="tableView_2">
-    <property name="geometry">
-     <rect>
-      <x>240</x>
-      <y>20</y>
-      <width>311</width>
-      <height>311</height>
-     </rect>
-    </property>
-    <property name="selectionMode">
-     <enum>QAbstractItemView::MultiSelection</enum>
-    </property>
-    <property name="selectionBehavior">
-     <enum>QAbstractItemView::SelectRows</enum>
-    </property>
-   </widget>
-   <widget class="QGroupBox" name="groupBox">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>150</y>
-      <width>91</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Редагування</string>
-    </property>
-    <widget class="QPushButton" name="pushButton_3">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>20</y>
-       <width>75</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Вставити</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_4">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>50</y>
-       <width>75</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Видалити</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_2">
-    <property name="geometry">
-     <rect>
-      <x>560</x>
-      <y>40</y>
-      <width>91</width>
-      <height>81</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Кешування</string>
-    </property>
-    <widget class="QPushButton" name="pushButton">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>20</y>
-       <width>75</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Підтвердити</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>50</y>
-       <width>75</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Відкат</string>
-     </property>
-    </widget>
-   </widget>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="page">
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="1" column="1">
+         <widget class="QLabel" name="label">
+          <property name="minimumSize">
+           <size>
+            <width>20</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>20</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>=</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QPushButton" name="pushButton_2">
+          <property name="text">
+           <string>Редагувати</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0" colspan="5">
+         <widget class="QTableView" name="tableview_main">
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="3">
+         <widget class="QPushButton" name="pushButton">
+          <property name="text">
+           <string>Вставити</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QComboBox" name="comboBox"/>
+        </item>
+        <item row="3" column="4">
+         <widget class="QPushButton" name="pushButton_3">
+          <property name="text">
+           <string>Видалити</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2" colspan="3">
+         <widget class="QLineEdit" name="lineEdit"/>
+        </item>
+        <item row="0" column="0" colspan="5">
+         <widget class="QTabWidget" name="tabs">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <widget class="QWidget" name="tab2">
+           <attribute name="title">
+            <string>Медичні установи</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab1">
+           <attribute name="title">
+            <string>Персонал</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab3">
+           <attribute name="title">
+            <string>Пацієнти</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab">
+           <attribute name="title">
+            <string>Цикл пацієнта</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab_2">
+           <attribute name="title">
+            <string>Медична исторія</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab_4">
+           <attribute name="title">
+            <string>Розклад</string>
+           </attribute>
+          </widget>
+          <widget class="QWidget" name="tab_5">
+           <attribute name="title">
+            <string>Огляд</string>
+           </attribute>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+       <zorder>tableview_main</zorder>
+       <zorder>pushButton_3</zorder>
+       <zorder>pushButton_2</zorder>
+       <zorder>pushButton</zorder>
+       <zorder>tabs</zorder>
+       <zorder>label</zorder>
+       <zorder>comboBox</zorder>
+       <zorder>lineEdit</zorder>
+      </widget>
+      <widget class="QWidget" name="page_2">
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0" colspan="4">
+         <widget class="QTableView" name="tableView">
+          <property name="selectionMode">
+           <enum>QAbstractItemView::MultiSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QPushButton" name="pushButton_5">
+          <property name="text">
+           <string>Вставити</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPushButton" name="pushButton_6">
+          <property name="text">
+           <string>Видалити</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="pushButton_7">
+          <property name="text">
+           <string>Підтвердити</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QPushButton" name="pushButton_8">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string>Скасувати</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -142,30 +214,62 @@
      <string>Головні таблиці</string>
     </property>
     <addaction name="separator"/>
-    <addaction name="action_1"/>
-    <addaction name="action_2"/>
+    <addaction name="action_main"/>
+    <addaction name="separator"/>
+    <addaction name="action_exit"/>
    </widget>
    <widget class="QMenu" name="menu_2">
     <property name="title">
-     <string>Довідники</string>
+     <string>Додаткові таблиці</string>
     </property>
-    <addaction name="action_3"/>
-    <addaction name="action_4"/>
+    <widget class="QMenu" name="menu_4">
+     <property name="title">
+      <string>Таблиці зв'язків</string>
+     </property>
+     <addaction name="actionPATIENT_SERVICE"/>
+     <addaction name="actionSURVEY_OF_PATIENT"/>
+     <addaction name="actionILLNESS_IN_HISTORY"/>
+     <addaction name="actionCUSTOM"/>
+     <addaction name="actionGIVEN_MEDICINE"/>
+    </widget>
+    <widget class="QMenu" name="menu_5">
+     <property name="title">
+      <string>Довідники</string>
+     </property>
+     <addaction name="separator"/>
+     <addaction name="actionOPERATION_TYPE"/>
+     <addaction name="actionSURVEY_TYPE"/>
+     <addaction name="separator"/>
+     <addaction name="actionLEAVE"/>
+     <addaction name="actionCONDITION"/>
+     <addaction name="actionILLNESS"/>
+     <addaction name="actionUNIT"/>
+    </widget>
+    <addaction name="menu_4"/>
+    <addaction name="menu_5"/>
+    <addaction name="separator"/>
+    <addaction name="actionTRACED_SURVEY"/>
+    <addaction name="actionOPERATION"/>
+    <addaction name="actionEQUIPMENT"/>
+    <addaction name="actionMEDICINE"/>
+    <addaction name="actionSUPPLIER"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>Допомога</string>
+    </property>
+    <addaction name="action_aboutdevs"/>
+    <addaction name="separator"/>
+    <addaction name="action_aboutQt"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
   </widget>
-  <widget class="QToolBar" name="mainToolBar">
-   <attribute name="toolBarArea">
-    <enum>TopToolBarArea</enum>
-   </attribute>
-   <attribute name="toolBarBreak">
-    <bool>false</bool>
-   </attribute>
-  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
   <action name="action_1">
    <property name="text">
-    <string>Таблиця1</string>
+    <string>Таблицы</string>
    </property>
   </action>
   <action name="action_2">
@@ -173,14 +277,169 @@
     <string>Таблиця2</string>
    </property>
   </action>
-  <action name="action_3">
+  <action name="action_dov1">
    <property name="text">
-    <string>Довідник1</string>
+    <string>Тип операції</string>
+   </property>
+  </action>
+  <action name="action_dov2">
+   <property name="text">
+    <string>Сервіс пацієнтів</string>
+   </property>
+  </action>
+  <action name="action_main">
+   <property name="text">
+    <string>Таблиці</string>
+   </property>
+  </action>
+  <action name="action_exit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="action_aboutdevs">
+   <property name="text">
+    <string>Про розробників</string>
+   </property>
+  </action>
+  <action name="action_aboutQt">
+   <property name="text">
+    <string>Про Qt</string>
    </property>
   </action>
   <action name="action_4">
    <property name="text">
-    <string>Довідник2</string>
+    <string>Пацієнт &lt;-&gt; Огляд</string>
+   </property>
+  </action>
+  <action name="action_5">
+   <property name="text">
+    <string>Хвороба &lt;-&gt; Історія</string>
+   </property>
+  </action>
+  <action name="action_7">
+   <property name="text">
+    <string>Хвороби</string>
+   </property>
+  </action>
+  <action name="action_8">
+   <property name="text">
+    <string>Виміри</string>
+   </property>
+  </action>
+  <action name="action_10">
+   <property name="text">
+    <string>Виписки</string>
+   </property>
+  </action>
+  <action name="action_11">
+   <property name="text">
+    <string>Постачальники</string>
+   </property>
+  </action>
+  <action name="action_12">
+   <property name="text">
+    <string>Обладнання</string>
+   </property>
+  </action>
+  <action name="action_14">
+   <property name="text">
+    <string>Тип операції</string>
+   </property>
+  </action>
+  <action name="action_15">
+   <property name="text">
+    <string>Тип огляду</string>
+   </property>
+  </action>
+  <action name="action_16">
+   <property name="text">
+    <string>Стан</string>
+   </property>
+  </action>
+  <action name="actionOPERATION_TYPE">
+   <property name="text">
+    <string>Тип операції</string>
+   </property>
+  </action>
+  <action name="actionSURVEY_OF_PATIENT">
+   <property name="text">
+    <string>Пацієнти &lt;-&gt; Обестеження</string>
+   </property>
+  </action>
+  <action name="actionPATIENT_SERVICE">
+   <property name="text">
+    <string>Пацієнти &lt;-&gt; персонал</string>
+   </property>
+  </action>
+  <action name="actionSURVEY_TYPE">
+   <property name="text">
+    <string>Тип обстеження</string>
+   </property>
+  </action>
+  <action name="actionTRACED_SURVEY">
+   <property name="text">
+    <string>Обстеження</string>
+   </property>
+  </action>
+  <action name="actionUNIT">
+   <property name="text">
+    <string>Одиниці</string>
+   </property>
+  </action>
+  <action name="actionPOLICY">
+   <property name="text">
+    <string>POLICY</string>
+   </property>
+  </action>
+  <action name="actionOPERATION">
+   <property name="text">
+    <string>Операції</string>
+   </property>
+  </action>
+  <action name="actionEQUIPMENT">
+   <property name="text">
+    <string>Обладнання</string>
+   </property>
+  </action>
+  <action name="actionLEAVE">
+   <property name="text">
+    <string>Відпустки</string>
+   </property>
+  </action>
+  <action name="actionILLNESS_IN_HISTORY">
+   <property name="text">
+    <string>Історія хвороби &lt;-&gt; Хвороби</string>
+   </property>
+  </action>
+  <action name="actionMEDICINE">
+   <property name="text">
+    <string>Медикаменти</string>
+   </property>
+  </action>
+  <action name="actionCUSTOM">
+   <property name="text">
+    <string>Установа &lt;-&gt; Постачальник</string>
+   </property>
+  </action>
+  <action name="actionCONDITION">
+   <property name="text">
+    <string>Стани</string>
+   </property>
+  </action>
+  <action name="actionSUPPLIER">
+   <property name="text">
+    <string>Постачальники</string>
+   </property>
+  </action>
+  <action name="actionILLNESS">
+   <property name="text">
+    <string>Хвороби</string>
+   </property>
+  </action>
+  <action name="actionGIVEN_MEDICINE">
+   <property name="text">
+    <string>Медикаменти &lt;-&gt; Розклад</string>
    </property>
   </action>
  </widget>
@@ -188,34 +447,66 @@
  <resources/>
  <connections>
   <connection>
-   <sender>tableView</sender>
-   <signal>doubleClicked(QModelIndex)</signal>
+   <sender>action_main</sender>
+   <signal>triggered()</signal>
    <receiver>MainWindow</receiver>
-   <slot>open_table(QModelIndex)</slot>
+   <slot>mode_maintables()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>145</x>
-     <y>208</y>
+     <x>-1</x>
+     <y>-1</y>
     </hint>
     <hint type="destinationlabel">
-     <x>423</x>
-     <y>476</y>
+     <x>330</x>
+     <y>203</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton</sender>
-   <signal>clicked()</signal>
+   <sender>action_exit</sender>
+   <signal>triggered()</signal>
    <receiver>MainWindow</receiver>
-   <slot>sql_submit()</slot>
+   <slot>myexit()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>605</x>
-     <y>115</y>
+     <x>-1</x>
+     <y>-1</y>
     </hint>
     <hint type="destinationlabel">
-     <x>726</x>
-     <y>74</y>
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_aboutQt</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>about_qt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_aboutdevs</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>about_devs()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
     </hint>
    </hints>
   </connection>
@@ -223,15 +514,127 @@
    <sender>pushButton_2</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
+   <slot>start_edit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>408</x>
+     <y>369</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>602</x>
+     <y>25</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>lineEdit</sender>
+   <signal>returnPressed()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>filter()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>358</x>
+     <y>72</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>373</x>
+     <y>28</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>filter()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>145</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>170</x>
+     <y>23</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>tabs</sender>
+   <signal>currentChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>tab_changed(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>103</x>
+     <y>57</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>95</x>
+     <y>30</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_5</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sql_insert()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>87</x>
+     <y>357</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>23</x>
+     <y>384</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_6</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sql_delete()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>213</x>
+     <y>363</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>185</x>
+     <y>384</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_7</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>sql_submit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>392</x>
+     <y>353</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>355</x>
+     <y>383</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_8</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
    <slot>sql_revert()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>607</x>
-     <y>144</y>
+     <x>523</x>
+     <y>359</y>
     </hint>
     <hint type="destinationlabel">
-     <x>330</x>
-     <y>200</y>
+     <x>490</x>
+     <y>386</y>
     </hint>
    </hints>
   </connection>
@@ -239,31 +642,287 @@
    <sender>pushButton_3</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>sql_insert()</slot>
+   <slot>sql_delete()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>615</x>
-     <y>208</y>
+     <x>534</x>
+     <y>359</y>
     </hint>
     <hint type="destinationlabel">
-     <x>681</x>
-     <y>229</y>
+     <x>659</x>
+     <y>368</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_4</sender>
+   <sender>pushButton</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>sql_delete()</slot>
+   <slot>start_insert()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>623</x>
-     <y>244</y>
+     <x>147</x>
+     <y>361</y>
     </hint>
     <hint type="destinationlabel">
-     <x>687</x>
-     <y>258</y>
+     <x>-1</x>
+     <y>345</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCONDITION</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action14()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOPERATION_TYPE</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionPATIENT_SERVICE</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action2()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSURVEY_OF_PATIENT</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action3()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSURVEY_TYPE</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action4()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionTRACED_SURVEY</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action5()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionUNIT</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action6()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOPERATION</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action8()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionEQUIPMENT</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action9()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionLEAVE</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action10()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionILLNESS_IN_HISTORY</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action11()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionMEDICINE</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action12()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCUSTOM</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action13()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSUPPLIER</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action15()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionILLNESS</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action16()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionGIVEN_MEDICINE</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action17()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
     </hint>
    </hints>
   </connection>
@@ -274,5 +933,31 @@
   <slot>sql_revert()</slot>
   <slot>sql_insert()</slot>
   <slot>sql_delete()</slot>
+  <slot>mode_maintables()</slot>
+  <slot>mode_helpers()</slot>
+  <slot>myexit()</slot>
+  <slot>tab_changed(int)</slot>
+  <slot>filter()</slot>
+  <slot>about_devs()</slot>
+  <slot>about_qt()</slot>
+  <slot>start_edit()</slot>
+  <slot>procces_action1()</slot>
+  <slot>procces_action2()</slot>
+  <slot>procces_action3()</slot>
+  <slot>procces_action4()</slot>
+  <slot>procces_action5()</slot>
+  <slot>procces_action6()</slot>
+  <slot>procces_action7()</slot>
+  <slot>procces_action8()</slot>
+  <slot>procces_action9()</slot>
+  <slot>procces_action10()</slot>
+  <slot>procces_action11()</slot>
+  <slot>procces_action12()</slot>
+  <slot>procces_action13()</slot>
+  <slot>procces_action14()</slot>
+  <slot>procces_action15()</slot>
+  <slot>procces_action16()</slot>
+  <slot>procces_action17()</slot>
+  <slot>start_insert()</slot>
  </slots>
 </ui>
