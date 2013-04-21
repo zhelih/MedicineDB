@@ -40,6 +40,9 @@ public:
         tableView->setObjectName(QStringLiteral("tableView"));
         tableView->setAutoFillBackground(false);
         tableView->setInputMethodHints(Qt::ImhNone);
+        tableView->setEditTriggers(QAbstractItemView::AnyKeyPressed|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed);
+        tableView->setSelectionMode(QAbstractItemView::MultiSelection);
+        tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
 
         gridLayout->addWidget(tableView, 0, 0, 1, 1);
 

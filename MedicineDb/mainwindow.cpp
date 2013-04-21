@@ -26,13 +26,13 @@ MainWindow::~MainWindow()
 
 const char* table_names[] =
 {
-    "MEDICAL_INSTITUTION",
-    "STAFF",
-    "PATIENT",
-    "CYCLE_OF_PATIENT",
-    "MEDICAL_HISTORY",
-    "APPLICATION_TIMETABLE",
-    "SURVEY"
+    "DB2ADMIN.MEDICAL_INSTITUTION",
+    "DB2ADMIN.STAFF",
+    "DB2ADMIN.PATIENT",
+    "DB2ADMIN.CYCLE_OF_PATIENT",
+    "DB2ADMIN.MEDICAL_HISTORY",
+    "DB2ADMIN.APPLICATION_TIMETABLE",
+    "DB2ADMIN.SURVEY"
 };
 
 const int nr_table_names = sizeof(table_names)/sizeof(table_names[0]);

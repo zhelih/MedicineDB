@@ -62,67 +62,67 @@ void MainWindow::sql_delete()
 
 void MainWindow::procces_action1 ()
 {
-    open_table("OPERATION_TYPE");
+    open_table("DB2ADMIN.OPERATION_TYPE");
 }
 
 void MainWindow::procces_action2 ()
 {
-    open_table("PATIENT_SERVICE");
+    open_table("DB2ADMIN.PATIENT_SERVICE");
 }
 
 void MainWindow::procces_action3 ()
 {
-    open_table("SURVEY_OF_PATIENT");
+    open_table("DB2ADMIN.SURVEY_OF_PATIENT");
 }
 void MainWindow::procces_action4 ()
 {
-    open_table("SURVEY_TYPE");
+    open_table("DB2ADMIN.SURVEY_TYPE");
 }
 void MainWindow::procces_action5 ()
 {
-    open_table("TRACED_SURVEY");
+    open_table("DB2ADMIN.TRACED_SURVEY");
 }
 void MainWindow::procces_action6 ()
 {
-    open_table("UNIT");
+    open_table("DB2ADMIN.UNIT");
 }
 void MainWindow::procces_action8 ()
 {
-    open_table("OPERATION");
+    open_table("DB2ADMIN.OPERATION");
 }
 void MainWindow::procces_action9 ()
 {
-    open_table("EQUIPMENT");
+    open_table("DB2ADMIN.EQUIPMENT");
 }
 void MainWindow::procces_action10()
 {
-    open_table("LEAVE");
+    open_table("DB2ADMIN.LEAVE");
 }
 void MainWindow::procces_action11()
 {
-    open_table("ILLNESS_IN_HISTORY");
+    open_table("DB2ADMIN.ILLNESS_IN_HISTORY");
 }
 void MainWindow::procces_action12()
 {
-    open_table("MEDICINE");
+    open_table("DB2ADMIN.MEDICINE");
 }
 void MainWindow::procces_action13()
 {
-    open_table("CUSTOM");
+    open_table("DB2ADMIN.CUSTOM");
 }
 void MainWindow::procces_action14()
 {
-    open_table("CONDITION");
+    open_table("DB2ADMIN.CONDITION");
 }
 void MainWindow::procces_action15()
 {
-    open_table("SUPPLIER");
+    open_table("DB2ADMIN.SUPPLIER");
 }
 void MainWindow::procces_action16()
 {
-    open_table("ILLNESS");
+    open_table("DB2ADMIN.ILLNESS");
 }
 void MainWindow::procces_action17()
 {
-    open_table("GIVEN_MEDICINE");
+    open_table("DB2ADMIN.GIVEN_MEDICINE");
 }
