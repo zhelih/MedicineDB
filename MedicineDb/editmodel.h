@@ -12,8 +12,9 @@ private:
     mySqlTableModel* model_sql;
     int row;
     QVariant* vars;
+    QWidget* father;
 public:
-    explicit EditModel(mySqlTableModel*, int row, QObject *parent = 0);
+    explicit EditModel(mySqlTableModel*, int row, QWidget *parent = 0);
     int rowCount(const QModelIndex&) const;
     int columnCount(const QModelIndex&) const;
     QVariant data(const QModelIndex&, int) const;

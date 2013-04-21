@@ -41,21 +41,6 @@ void MainWindow::set_database(QSqlDatabase* db_in) { db2 = db_in; }
 
 void MainWindow::init()
 {
-
-/*    QStringList tables = db2->tables();
-    QStandardItemModel* model = new QStandardItemModel(tables.length(),1,this);
-    model->setHorizontalHeaderItem(0,new QStandardItem(QString("Таблиці")));
-    for(int i=0; i<tables.length();++i)
-    {
-        model->setItem(i,0,new QStandardItem(QString(tables[i])));
-    }
-    ui->tableView->setModel(model);
-    ui->tableView->horizontalHeader()->resizeSections(QHeaderView::ResizeToContents);
-
-    model_sql = new QSqlTableModel(this, *db2);
-    model_sql->setEditStrategy(QSqlTableModel::OnManualSubmit);
-    ui->tableView_2->setModel(model_sql);
-*/
     t.reread();
     model_sql = new mySqlTableModel(this, *db2, &t);
     model_sql->setEditStrategy(QSqlTableModel::OnManualSubmit);
