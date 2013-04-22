@@ -19,7 +19,7 @@ public:
     ~MainWindow();
     void init();
     void set_database(QSqlDatabase*);
-    void set_mode(bool);
+    void set_mode(int);
     
 private:
     Ui::MainWindow *ui;

@@ -169,9 +169,9 @@ void MainWindow::start_edit()
     }
 }
 
-void MainWindow::set_mode(bool b)
+void MainWindow::set_mode(int b)
 {
-    if(!b)
+    if(b == 1)
     {
         //disable edit mode
         emit ui->pushButton->setEnabled(false);
@@ -183,5 +183,13 @@ void MainWindow::set_mode(bool b)
         emit ui->pushButton_8->setEnabled(false);
         emit ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
         emit ui->tabs->tabBar()->setTabEnabled(2,false);
+    }
+    else if(b == 2)
+    {
+        emit ui->pushButton_5->setEnabled(false);
+        emit ui->pushButton_6->setEnabled(false);
+        emit ui->pushButton_7->setEnabled(false);
+        emit ui->pushButton_8->setEnabled(false);
+        emit ui->tableView->setEditTriggers(QAbstractItemView::NoEditTriggers);
     }
 }

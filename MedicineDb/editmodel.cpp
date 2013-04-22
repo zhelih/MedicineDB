@@ -40,7 +40,8 @@ QSqlRecord EditModel::record()
     if (row == -1)
     {
         QSqlQuery q(model_sql->database());
-        q.exec("VALUES NEXT VALUE FOR SEQ_" + model_sql->tableName());
+        QString tablename = model_sql->tableName().split(".").at(1);
+        q.exec("VALUES NEXT VALUE FOR SEQ_" + tablename);
         if(q.lastError().type() != QSqlError::NoError)
         {
             QMessageBox::critical(father, "Помилка при SEQUENCE", q.lastError().text());

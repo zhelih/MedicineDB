@@ -44,7 +44,7 @@ void Dialog::accept()
         QDialog::accept();
 }
 
-bool Dialog::is_checked()
+int Dialog::get_mode()
 {
-    return ui->checkBox->isChecked();
+    return ui->comboBox->currentIndex();
 }

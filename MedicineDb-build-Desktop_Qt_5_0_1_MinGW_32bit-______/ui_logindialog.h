@@ -13,7 +13,7 @@
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
-#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QDialogButtonBox>
 #include <QtWidgets/QHeaderView>
@@ -34,7 +34,7 @@ public:
     QLineEdit *lineEdit_3;
     QLineEdit *lineEdit_4;
     QLineEdit *lineEdit_5;
-    QCheckBox *checkBox;
+    QComboBox *comboBox;
 
     void setupUi(QDialog *Dialog)
     {
@@ -80,11 +80,9 @@ public:
         lineEdit_5->setObjectName(QStringLiteral("lineEdit_5"));
         lineEdit_5->setGeometry(QRect(240, 30, 101, 20));
         lineEdit_5->setReadOnly(true);
-        checkBox = new QCheckBox(Dialog);
-        checkBox->setObjectName(QStringLiteral("checkBox"));
-        checkBox->setGeometry(QRect(240, 90, 101, 17));
-        checkBox->setChecked(true);
-        checkBox->setTristate(false);
+        comboBox = new QComboBox(Dialog);
+        comboBox->setObjectName(QStringLiteral("comboBox"));
+        comboBox->setGeometry(QRect(230, 90, 111, 22));
 
         retranslateUi(Dialog);
         QObject::connect(buttonBox, SIGNAL(accepted()), Dialog, SLOT(accept()));
@@ -103,7 +101,12 @@ public:
         lineEdit_3->setText(QApplication::translate("Dialog", "127.0.0.1", 0));
         lineEdit_4->setText(QApplication::translate("Dialog", "50000", 0));
         lineEdit_5->setText(QApplication::translate("Dialog", "Medicine", 0));
-        checkBox->setText(QApplication::translate("Dialog", "\320\240\320\265\320\266\320\270\320\274 \320\260\320\264\320\274\321\226\320\275\320\260", 0));
+        comboBox->clear();
+        comboBox->insertItems(0, QStringList()
+         << QApplication::translate("Dialog", "\320\220\320\264\320\274\321\226\320\275", 0)
+         << QApplication::translate("Dialog", "\320\224\320\270\321\200\320\265\320\272\321\202\320\276\321\200", 0)
+         << QApplication::translate("Dialog", "\320\236\320\277\320\265\321\200\320\260\321\202\320\276\321\200", 0)
+        );
     } // retranslateUi
 
 };

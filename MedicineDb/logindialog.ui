@@ -166,24 +166,30 @@
     <bool>true</bool>
    </property>
   </widget>
-  <widget class="QCheckBox" name="checkBox">
+  <widget class="QComboBox" name="comboBox">
    <property name="geometry">
     <rect>
-     <x>240</x>
+     <x>230</x>
      <y>90</y>
-     <width>101</width>
-     <height>17</height>
+     <width>111</width>
+     <height>22</height>
     </rect>
    </property>
-   <property name="text">
-    <string>Режим адміна</string>
-   </property>
-   <property name="checked">
-    <bool>true</bool>
-   </property>
-   <property name="tristate">
-    <bool>false</bool>
-   </property>
+   <item>
+    <property name="text">
+     <string>Адмін</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Директор</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Оператор</string>
+    </property>
+   </item>
   </widget>
  </widget>
  <resources/>

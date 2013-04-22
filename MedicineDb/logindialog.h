@@ -17,7 +17,7 @@ public:
     ~Dialog();
     QString get_login();
     QString get_password();
-    bool is_checked();
+    int get_mode();
 
 private:
     Ui::Dialog *ui;
