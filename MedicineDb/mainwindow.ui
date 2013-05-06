@@ -213,8 +213,16 @@
     <property name="title">
      <string>Головні таблиці</string>
     </property>
+    <widget class="QMenu" name="menu_6">
+     <property name="title">
+      <string>Процедури перевірки</string>
+     </property>
+     <addaction name="action_3"/>
+     <addaction name="action_6"/>
+    </widget>
     <addaction name="separator"/>
     <addaction name="action_main"/>
+    <addaction name="menu_6"/>
     <addaction name="separator"/>
     <addaction name="action_exit"/>
    </widget>
@@ -440,6 +448,16 @@
   <action name="actionGIVEN_MEDICINE">
    <property name="text">
     <string>Медикаменти &lt;-&gt; Розклад</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>Процедура 1</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="text">
+    <string>Процедура 2</string>
    </property>
   </action>
  </widget>
