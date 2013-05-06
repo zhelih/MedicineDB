@@ -21,7 +21,7 @@ EditModel::EditModel(mySqlTableModel* m, int r, QWidget *parent) :
 
 EditModel::~EditModel() { printf("editmodel destuctor really called\n"); delete [] vars; }
 
-int EditModel::rowCount(const QModelIndex & parent = QModelIndex()) const
+int EditModel::rowCount(const QModelIndex & parent) const
 {
     return model_sql->columnCount();
 }
@@ -92,6 +92,7 @@ Qt::ItemFlags EditModel::flags(const QModelIndex & index) const
 
 bool EditModel::setData(const QModelIndex & index, const QVariant & value, int role)
 {
+    qDebug("EditModel::setData at index(%d,%d) with value %s", index.row(), index.column(), qPrintable(value.toString()));
     if (role == Qt::EditRole)
     {
         vars[index.row()] = value;

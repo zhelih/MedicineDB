@@ -18,14 +18,16 @@ SOURCES += main.cpp\
     translate_load.cpp \
     editdialog.cpp \
     editmodel.cpp \
-    mainwindow_ext.cpp
+    mainwindow_ext.cpp \
+    calendardelegate.cpp
 
 HEADERS  += mainwindow.h \
     logindialog.h \
     translate_load.h \
     mysqlmodel.h \
     editdialog.h \
-    editmodel.h
+    editmodel.h \
+    calendardelegate.h
 
 FORMS    += mainwindow.ui \
     logindialog.ui \

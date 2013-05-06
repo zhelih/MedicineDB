@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "calendardelegate.h"
 #include <QtSql/QtSql>
 #include <Qt>
 #include <QTableView>
@@ -18,6 +19,7 @@ void MainWindow::open_table(QString table)
     ui->tableView->horizontalHeader()->resizeSections(QHeaderView::ResizeToContents);
     emit ui->tableView->repaint();
     current_table = table;
+    ui->tableView->setItemDelegate(new CalendarDelegate());
     show_error();
 }
 
@@ -26,7 +28,7 @@ void MainWindow::sql_submit()
     emit model_sql->submitAll();
     if(model_sql->lastError().type() != (QSqlError::NoError))
     {
-        QMessageBox::information(this, "Помилка", model_sql->lastError().text());
+        QMessageBox::critical(this, "Помилка", model_sql->lastError().text());
         emit model_sql->revertAll();
     }
 }

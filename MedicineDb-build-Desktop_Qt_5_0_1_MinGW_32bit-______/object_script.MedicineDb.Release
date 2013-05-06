@@ -6,8 +6,10 @@ INPUT(
 ./release\editdialog.o
 ./release\editmodel.o
 ./release\mainwindow_ext.o
+./release\calendardelegate.o
 ./release\moc_mainwindow.o
 ./release\moc_logindialog.o
 ./release\moc_editdialog.o
 ./release\moc_editmodel.o
+./release\moc_calendardelegate.o
 );

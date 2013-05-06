@@ -8,6 +8,7 @@
 #include "editmodel.h"
 #include "mysqlmodel.h"
 #include "mysqlmodel.h"
+#include "calendardelegate.h"
 
 namespace Ui {
 class EditDialog;
@@ -26,6 +27,7 @@ private:
     EditModel* editmodel;
     mySqlTableModel* model_sql;
     int row_;
+    CalendarDelegate *cal;
 public slots:
     virtual void accept();
 };

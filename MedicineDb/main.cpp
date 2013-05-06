@@ -1,3 +1,5 @@
+#define QT_NO_DEBUG_OUTPUT
+
 #include "mainwindow.h"
 #include "logindialog.h"
 #include <QApplication>

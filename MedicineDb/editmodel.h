@@ -15,7 +15,7 @@ private:
     QWidget* father;
 public:
     explicit EditModel(mySqlTableModel*, int row, QWidget *parent = 0);
-    int rowCount(const QModelIndex&) const;
+    int rowCount(const QModelIndex& parent = QModelIndex()) const;
     int columnCount(const QModelIndex&) const;
     QVariant data(const QModelIndex&, int) const;
     QVariant headerData(int, Qt::Orientation, int) const;
