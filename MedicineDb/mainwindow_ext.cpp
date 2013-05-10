@@ -64,67 +64,67 @@ void MainWindow::sql_delete()
 
 void MainWindow::procces_action1 ()
 {
-    open_table("DB2ADMIN.OPERATION_TYPE");
+    open_table(USER_PREFIX+"OPERATION_TYPE");
 }
 
 void MainWindow::procces_action2 ()
 {
-    open_table("DB2ADMIN.PATIENT_SERVICE");
+    open_table(USER_PREFIX+"PATIENT_SERVICE");
 }
 
 void MainWindow::procces_action3 ()
 {
-    open_table("DB2ADMIN.SURVEY_OF_PATIENT");
+    open_table(USER_PREFIX+"SURVEY_OF_PATIENT");
 }
 void MainWindow::procces_action4 ()
 {
-    open_table("DB2ADMIN.SURVEY_TYPE");
+    open_table(USER_PREFIX+"SURVEY_TYPE");
 }
 void MainWindow::procces_action5 ()
 {
-    open_table("DB2ADMIN.TRACED_SURVEY");
+    open_table(USER_PREFIX+"TRACED_SURVEY");
 }
 void MainWindow::procces_action6 ()
 {
-    open_table("DB2ADMIN.UNIT");
+    open_table(USER_PREFIX+"UNIT");
 }
 void MainWindow::procces_action8 ()
 {
-    open_table("DB2ADMIN.OPERATION");
+    open_table(USER_PREFIX+"OPERATION");
 }
 void MainWindow::procces_action9 ()
 {
-    open_table("DB2ADMIN.EQUIPMENT");
+    open_table(USER_PREFIX+"EQUIPMENT");
 }
 void MainWindow::procces_action10()
 {
-    open_table("DB2ADMIN.LEAVE");
+    open_table(USER_PREFIX+"LEAVE");
 }
 void MainWindow::procces_action11()
 {
-    open_table("DB2ADMIN.ILLNESS_IN_HISTORY");
+    open_table(USER_PREFIX+"ILLNESS_IN_HISTORY");
 }
 void MainWindow::procces_action12()
 {
-    open_table("DB2ADMIN.MEDICINE");
+    open_table(USER_PREFIX+"MEDICINE");
 }
 void MainWindow::procces_action13()
 {
-    open_table("DB2ADMIN.CUSTOM");
+    open_table(USER_PREFIX+"CUSTOM");
 }
 void MainWindow::procces_action14()
 {
-    open_table("DB2ADMIN.CONDITION");
+    open_table(USER_PREFIX+"CONDITION");
 }
 void MainWindow::procces_action15()
 {
-    open_table("DB2ADMIN.SUPPLIER");
+    open_table(USER_PREFIX+"SUPPLIER");
 }
 void MainWindow::procces_action16()
 {
-    open_table("DB2ADMIN.ILLNESS");
+    open_table(USER_PREFIX+"ILLNESS");
 }
 void MainWindow::procces_action17()
 {
-    open_table("DB2ADMIN.GIVEN_MEDICINE");
+    open_table(USER_PREFIX+"GIVEN_MEDICINE");
 }

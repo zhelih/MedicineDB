@@ -31,7 +31,8 @@ void translation::reread()
                 int space = buf.indexOf(' '); //space is index
                 QString key = buf.left(space); //param is len
                 QString val = buf.right(buf.size() - space - 1);//same
-                val.chop(1); //remove\n
+                //hack
+                val.chop(2); //remove\n
                 data.insert(key.toLower(),val);
             }
         }

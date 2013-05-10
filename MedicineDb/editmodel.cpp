@@ -19,7 +19,7 @@ EditModel::EditModel(mySqlTableModel* m, int r, QWidget *parent) :
     father = parent;
 }
 
-EditModel::~EditModel() { printf("editmodel destuctor really called\n"); delete [] vars; }
+EditModel::~EditModel() { qDebug("editmodel destuctor really called\n"); delete [] vars; }
 
 int EditModel::rowCount(const QModelIndex & parent) const
 {

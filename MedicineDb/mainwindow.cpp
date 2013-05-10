@@ -24,15 +24,15 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-const char* table_names[] =
+const QString table_names[] =
 {
-    "DB2ADMIN.MEDICAL_INSTITUTION",
-    "DB2ADMIN.STAFF",
-    "DB2ADMIN.PATIENT",
-    "DB2ADMIN.CYCLE_OF_PATIENT",
-    "DB2ADMIN.MEDICAL_HISTORY",
-    "DB2ADMIN.APPLICATION_TIMETABLE",
-    "DB2ADMIN.SURVEY"
+    USER_PREFIX+"MEDICAL_INSTITUTION",
+    USER_PREFIX+"STAFF",
+    USER_PREFIX+"PATIENT",
+    USER_PREFIX+"CYCLE_OF_PATIENT",
+    USER_PREFIX+"MEDICAL_HISTORY",
+    USER_PREFIX+"APPLICATION_TIMETABLE",
+    USER_PREFIX+"SURVEY"
 };
 
 const int nr_table_names = sizeof(table_names)/sizeof(table_names[0]);

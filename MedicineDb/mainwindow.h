@@ -6,6 +6,8 @@
 #include "translate_load.h"
 #include "mysqlmodel.h"
 
+#define USER_PREFIX (QString("DB2ADMIN2."))
+
 namespace Ui {
 class MainWindow;
 }
