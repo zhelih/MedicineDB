@@ -7,6 +7,7 @@ INPUT(
 ./debug\editmodel.o
 ./debug\mainwindow_ext.o
 ./debug\calendardelegate.o
+./debug\procedurecall.o
 ./debug\moc_mainwindow.o
 ./debug\moc_logindialog.o
 ./debug\moc_editdialog.o

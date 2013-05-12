@@ -7,6 +7,7 @@
 #include <QStandardItemModel>
 #include <QMessageBox>
 #include <QtSql/QSqlError>
+#include <QInputDialog>
 
 void MainWindow::open_table(QString table)
 {
@@ -128,3 +129,50 @@ void MainWindow::procces_action17()
 {
     open_table(USER_PREFIX+"GIVEN_MEDICINE");
 }
+
+// procedures
+void MainWindow::procces_action18()
+{
+    bool ok;
+    int id = QInputDialog::getInt(this, "Введення даних", "id Медичного закладу:", 0, -2147483647, 2147483647, 1, &ok);
+    if(ok)
+    {
+        id = p->total_patients(id);
+        QMessageBox::information(this, "Результат", "Кількість прийнятих пацієнтів: " + QString::number(id));
+    }
+}
+
+void MainWindow::procces_action19()
+{
+    bool ok;
+    int id = QInputDialog::getInt(this, "Введення даних", "id Медичного закладу:", 0, -2147483647, 2147483647, 1, &ok);
+    if(ok)
+    {
+        id = p->total_costs(id);
+        QMessageBox::information(this, "Результат", "Витрати: " + QString::number(id));
+    }
+}
+
+void MainWindow::procces_action20()
+{
+    bool ok;
+    int id = QInputDialog::getInt(this, "Введення даних", "Зміна зарплати:", 0, -2147483647, 2147483647, 1, &ok);
+    if(ok)
+    {
+        p->increase_salary(id);
+    }
+}
+
+void MainWindow::procces_action21()
+{
+    p->remove_empty_medicine();
+}
+
+void MainWindow::procces_action22()
+{
+    p->remove_old_contracts();
+}
+
+/*
+QList<ill> illness(int);
+*/

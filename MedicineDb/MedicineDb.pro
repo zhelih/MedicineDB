@@ -19,7 +19,8 @@ SOURCES += main.cpp\
     editdialog.cpp \
     editmodel.cpp \
     mainwindow_ext.cpp \
-    calendardelegate.cpp
+    calendardelegate.cpp \
+    procedurecall.cpp
 
 HEADERS  += mainwindow.h \
     logindialog.h \
@@ -27,7 +28,8 @@ HEADERS  += mainwindow.h \
     mysqlmodel.h \
     editdialog.h \
     editmodel.h \
-    calendardelegate.h
+    calendardelegate.h \
+    procedurecall.h
 
 FORMS    += mainwindow.ui \
     logindialog.ui \

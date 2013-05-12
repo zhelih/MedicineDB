@@ -5,8 +5,9 @@
 #include <QtSql/QtSql>
 #include "translate_load.h"
 #include "mysqlmodel.h"
+#include "procedurecall.h"
 
-#define USER_PREFIX (QString("DB2ADMIN2."))
+#define USER_PREFIX (QString("DB2ADMIN."))
 
 namespace Ui {
 class MainWindow;
@@ -33,6 +34,7 @@ private:
     void update_filter();
     void open_table(QString);
     QString current_table;
+    ProcedureCall* p;
 
 public slots:
     void mode_maintables();
@@ -71,6 +73,12 @@ public slots:
     void procces_action15();
     void procces_action16();
     void procces_action17();
+    // procedures
+    void procces_action18();
+    void procces_action19();
+    void procces_action20();
+    void procces_action21();
+    void procces_action22();
 };
 
 #endif // MAINWINDOW_H

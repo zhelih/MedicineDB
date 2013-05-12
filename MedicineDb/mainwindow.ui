@@ -102,7 +102,7 @@
            </size>
           </property>
           <property name="currentIndex">
-           <number>6</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="tab2">
            <attribute name="title">
@@ -206,7 +206,7 @@
      <x>0</x>
      <y>0</y>
      <width>662</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -219,6 +219,9 @@
      </property>
      <addaction name="action_3"/>
      <addaction name="action_6"/>
+     <addaction name="action_9"/>
+     <addaction name="action_13"/>
+     <addaction name="action_17"/>
     </widget>
     <addaction name="separator"/>
     <addaction name="action_main"/>
@@ -460,6 +463,21 @@
     <string>Процедура 2</string>
    </property>
   </action>
+  <action name="action_9">
+   <property name="text">
+    <string>Процедура 3</string>
+   </property>
+  </action>
+  <action name="action_13">
+   <property name="text">
+    <string>Процедура 4</string>
+   </property>
+  </action>
+  <action name="action_17">
+   <property name="text">
+    <string>Процедура 5</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
@@ -599,8 +617,8 @@
    <slot>sql_insert()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>87</x>
-     <y>357</y>
+     <x>96</x>
+     <y>59</y>
     </hint>
     <hint type="destinationlabel">
      <x>23</x>
@@ -615,8 +633,8 @@
    <slot>sql_delete()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>213</x>
-     <y>363</y>
+     <x>108</x>
+     <y>59</y>
     </hint>
     <hint type="destinationlabel">
      <x>185</x>
@@ -631,8 +649,8 @@
    <slot>sql_submit()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>392</x>
-     <y>353</y>
+     <x>108</x>
+     <y>59</y>
     </hint>
     <hint type="destinationlabel">
      <x>355</x>
@@ -647,8 +665,8 @@
    <slot>sql_revert()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>523</x>
-     <y>359</y>
+     <x>108</x>
+     <y>59</y>
     </hint>
     <hint type="destinationlabel">
      <x>490</x>
@@ -944,6 +962,86 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>action_3</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action18()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_6</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action19()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_9</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action20()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_13</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action21()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_17</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action22()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>open_table(QModelIndex)</slot>
@@ -977,5 +1075,10 @@
   <slot>procces_action16()</slot>
   <slot>procces_action17()</slot>
   <slot>start_insert()</slot>
+  <slot>procces_action18()</slot>
+  <slot>procces_action19()</slot>
+  <slot>procces_action20()</slot>
+  <slot>procces_action21()</slot>
+  <slot>procces_action22()</slot>
  </slots>
 </ui>

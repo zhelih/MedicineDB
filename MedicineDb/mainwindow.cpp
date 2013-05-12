@@ -21,6 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
+    delete p;
     delete ui;
 }
 
@@ -51,6 +52,7 @@ void MainWindow::init()
     update_filter();
     ui->stackedWidget->setCurrentIndex(0);
     inited=true;
+    p=new ProcedureCall(db2);
 }
 
 void MainWindow::show_error()

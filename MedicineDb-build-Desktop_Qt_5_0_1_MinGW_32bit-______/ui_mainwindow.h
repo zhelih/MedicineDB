@@ -70,6 +70,9 @@ public:
     QAction *actionGIVEN_MEDICINE;
     QAction *action_3;
     QAction *action_6;
+    QAction *action_9;
+    QAction *action_13;
+    QAction *action_17;
     QWidget *centralWidget;
     QGridLayout *gridLayout;
     QStackedWidget *stackedWidget;
@@ -186,6 +189,12 @@ public:
         action_3->setObjectName(QStringLiteral("action_3"));
         action_6 = new QAction(MainWindow);
         action_6->setObjectName(QStringLiteral("action_6"));
+        action_9 = new QAction(MainWindow);
+        action_9->setObjectName(QStringLiteral("action_9"));
+        action_13 = new QAction(MainWindow);
+        action_13->setObjectName(QStringLiteral("action_13"));
+        action_17 = new QAction(MainWindow);
+        action_17->setObjectName(QStringLiteral("action_17"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gridLayout = new QGridLayout(centralWidget);
@@ -347,6 +356,9 @@ public:
         menu->addAction(action_exit);
         menu_6->addAction(action_3);
         menu_6->addAction(action_6);
+        menu_6->addAction(action_9);
+        menu_6->addAction(action_13);
+        menu_6->addAction(action_17);
         menu_2->addAction(menu_4->menuAction());
         menu_2->addAction(menu_5->menuAction());
         menu_2->addSeparator();
@@ -403,6 +415,11 @@ public:
         QObject::connect(actionSUPPLIER, SIGNAL(triggered()), MainWindow, SLOT(procces_action15()));
         QObject::connect(actionILLNESS, SIGNAL(triggered()), MainWindow, SLOT(procces_action16()));
         QObject::connect(actionGIVEN_MEDICINE, SIGNAL(triggered()), MainWindow, SLOT(procces_action17()));
+        QObject::connect(action_3, SIGNAL(triggered()), MainWindow, SLOT(procces_action18()));
+        QObject::connect(action_6, SIGNAL(triggered()), MainWindow, SLOT(procces_action19()));
+        QObject::connect(action_9, SIGNAL(triggered()), MainWindow, SLOT(procces_action20()));
+        QObject::connect(action_13, SIGNAL(triggered()), MainWindow, SLOT(procces_action21()));
+        QObject::connect(action_17, SIGNAL(triggered()), MainWindow, SLOT(procces_action22()));
 
         stackedWidget->setCurrentIndex(0);
         tabs->setCurrentIndex(0);
@@ -451,6 +468,9 @@ public:
         actionGIVEN_MEDICINE->setText(QApplication::translate("MainWindow", "\320\234\320\265\320\264\320\270\320\272\320\260\320\274\320\265\320\275\321\202\320\270 <-> \320\240\320\276\320\267\320\272\320\273\320\260\320\264", 0));
         action_3->setText(QApplication::translate("MainWindow", "\320\237\321\200\320\276\321\206\320\265\320\264\321\203\321\200\320\260 1", 0));
         action_6->setText(QApplication::translate("MainWindow", "\320\237\321\200\320\276\321\206\320\265\320\264\321\203\321\200\320\260 2", 0));
+        action_9->setText(QApplication::translate("MainWindow", "\320\237\321\200\320\276\321\206\320\265\320\264\321\203\321\200\320\260 3", 0));
+        action_13->setText(QApplication::translate("MainWindow", "\320\237\321\200\320\276\321\206\320\265\320\264\321\203\321\200\320\260 4", 0));
+        action_17->setText(QApplication::translate("MainWindow", "\320\237\321\200\320\276\321\206\320\265\320\264\321\203\321\200\320\260 5", 0));
         label->setText(QApplication::translate("MainWindow", "=", 0));
         pushButton_2->setText(QApplication::translate("MainWindow", "\320\240\320\265\320\264\320\260\320\263\321\203\320\262\320\260\321\202\320\270", 0));
         pushButton->setText(QApplication::translate("MainWindow", "\320\222\321\201\321\202\320\260\320\262\320\270\321\202\320\270", 0));
@@ -461,7 +481,7 @@ public:
         tabs->setTabText(tabs->indexOf(tab), QApplication::translate("MainWindow", "\320\246\320\270\320\272\320\273 \320\277\320\260\321\206\321\226\321\224\320\275\321\202\320\260", 0));
         tabs->setTabText(tabs->indexOf(tab_2), QApplication::translate("MainWindow", "\320\234\320\265\320\264\320\270\321\207\320\275\320\260 \320\270\321\201\321\202\320\276\321\200\321\226\321\217", 0));
         tabs->setTabText(tabs->indexOf(tab_4), QApplication::translate("MainWindow", "\320\240\320\276\320\267\320\272\320\273\320\260\320\264", 0));
-        tabs->setTabText(tabs->indexOf(tab_5), QApplication::translate("MainWindow", "\320\236\320\263\320\273\321\217\320\264", 0));
+        tabs->setTabText(tabs->indexOf(tab_5), QApplication::translate("MainWindow", "\320\236\320\261\321\201\321\202\320\265\320\266\320\265\320\275\320\275\321\217", 0));
         pushButton_5->setText(QApplication::translate("MainWindow", "\320\222\321\201\321\202\320\260\320\262\320\270\321\202\320\270", 0));
         pushButton_6->setText(QApplication::translate("MainWindow", "\320\222\320\270\320\264\320\260\320\273\320\270\321\202\320\270", 0));
         pushButton_7->setText(QApplication::translate("MainWindow", "\320\237\321\226\320\264\321\202\320\262\320\265\321\200\320\264\320\270\321\202\320\270", 0));
