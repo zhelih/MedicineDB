@@ -215,10 +215,11 @@
     </property>
     <widget class="QMenu" name="menu_6">
      <property name="title">
-      <string>Процедури перевірки</string>
+      <string>Процедури та функції</string>
      </property>
      <addaction name="action_3"/>
      <addaction name="action_6"/>
+     <addaction name="action"/>
      <addaction name="action_9"/>
      <addaction name="action_13"/>
      <addaction name="action_17"/>
@@ -455,27 +456,32 @@
   </action>
   <action name="action_3">
    <property name="text">
-    <string>Процедура 1</string>
+    <string>Загальна кількість пацієнтів</string>
    </property>
   </action>
   <action name="action_6">
    <property name="text">
-    <string>Процедура 2</string>
+    <string>Сумарні видатки</string>
    </property>
   </action>
   <action name="action_9">
    <property name="text">
-    <string>Процедура 3</string>
+    <string>Підвищити заробітню плату</string>
    </property>
   </action>
   <action name="action_13">
    <property name="text">
-    <string>Процедура 4</string>
+    <string>Видалити старі контракти</string>
    </property>
   </action>
   <action name="action_17">
    <property name="text">
-    <string>Процедура 5</string>
+    <string>Видалити пусті медикаменти</string>
+   </property>
+  </action>
+  <action name="action">
+   <property name="text">
+    <string>Статистика хвороб</string>
    </property>
   </action>
  </widget>
@@ -969,8 +975,8 @@
    <slot>procces_action18()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>330</x>
-     <y>203</y>
+     <x>-1</x>
+     <y>-1</y>
     </hint>
     <hint type="destinationlabel">
      <x>330</x>
@@ -1042,6 +1048,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>action</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>procces_action23()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>open_table(QModelIndex)</slot>
@@ -1080,5 +1102,6 @@
   <slot>procces_action20()</slot>
   <slot>procces_action21()</slot>
   <slot>procces_action22()</slot>
+  <slot>procces_action23()</slot>
  </slots>
 </ui>

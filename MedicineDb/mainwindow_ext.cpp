@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "calendardelegate.h"
+#include "listdialog.h"
 #include <QtSql/QtSql>
 #include <Qt>
 #include <QTableView>
@@ -171,6 +172,18 @@ void MainWindow::procces_action21()
 void MainWindow::procces_action22()
 {
     p->remove_old_contracts();
+}
+
+void MainWindow::procces_action23()
+{
+    bool ok;
+    int id = QInputDialog::getInt(this, "Введення даних", "id Пацієнта:", 0, -2147483647, 2147483647, 1, &ok);
+    if(ok)
+    {
+        ListDialog dlg(this);
+        dlg.setData(p->illness(id));
+        dlg.exec();
+    }
 }
 
 /*

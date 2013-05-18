@@ -20,7 +20,8 @@ SOURCES += main.cpp\
     editmodel.cpp \
     mainwindow_ext.cpp \
     calendardelegate.cpp \
-    procedurecall.cpp
+    procedurecall.cpp \
+    listdialog.cpp
 
 HEADERS  += mainwindow.h \
     logindialog.h \
@@ -29,11 +30,13 @@ HEADERS  += mainwindow.h \
     editdialog.h \
     editmodel.h \
     calendardelegate.h \
-    procedurecall.h
+    procedurecall.h \
+    listdialog.h
 
 FORMS    += mainwindow.ui \
     logindialog.ui \
-    editdialog.ui
+    editdialog.ui \
+    listdialog.ui
 
 #LIBS += C:\Qt\Qt5.0.1\5.0.1\Src\qtbase\plugins\sqldrivers\libqsqldb2.a
 #LIBS += C:\Qt\Qt5.0.1\5.0.1\Src\qtbase\plugins\sqldrivers\libqsqldb2d.a

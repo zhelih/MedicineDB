@@ -8,9 +8,11 @@ INPUT(
 ./release\mainwindow_ext.o
 ./release\calendardelegate.o
 ./release\procedurecall.o
+./release\listdialog.o
 ./release\moc_mainwindow.o
 ./release\moc_logindialog.o
 ./release\moc_editdialog.o
 ./release\moc_editmodel.o
 ./release\moc_calendardelegate.o
+./release\moc_listdialog.o
 );

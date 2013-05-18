@@ -11,10 +11,12 @@ ProcedureCall::ProcedureCall(QSqlDatabase* db_in)
 
 int ProcedureCall::total_patients(int id)
 {
-    QSqlQuery query("SELECT db2admin.total_patients("+ QString::number(id) + ") FROM sysibm.sysdummy1", *db);
-    query.exec();
+    QSqlQuery query(*db);
+    query.setForwardOnly(true);
+    query.prepare("SELECT db2admin.total_patients("+ QString::number(id) + ") FROM sysibm.sysdummy1");
+    bool ok = query.exec();
     qDebug("performig query : %s", qPrintable(query.lastQuery()));
-    if(query.lastError().type() != QSqlError::NoError)
+    if(!ok)
         QMessageBox::critical(0, "Помилка", query.lastError().text());
     int res;
     if(query.next())
@@ -27,10 +29,12 @@ int ProcedureCall::total_patients(int id)
 
 int ProcedureCall::total_costs(int id)
 {
-    QSqlQuery query("SELECT db2admin.total_costs("+ QString::number(id) + ") FROM sysibm.sysdummy1", *db);
-    query.exec();
+    QSqlQuery query(*db);
+    query.setForwardOnly(true);
+    query.prepare("SELECT db2admin.total_costs ("+ QString::number(id) + ") FROM sysibm.sysdummy1");
+    bool ok  = query.exec();
     qDebug("performig query : %s", qPrintable(query.lastQuery()));
-    if(query.lastError().type() != QSqlError::NoError)
+    if(!ok)
         QMessageBox::critical(0, "Помилка", query.lastError().text());
     int res;
     if(query.next())
@@ -43,7 +47,9 @@ int ProcedureCall::total_costs(int id)
 
 QList<ill> ProcedureCall::illness(int id)
 {
-    QSqlQuery query("select t.Illness, t.Date_of_admission, t.Date_of_leaving from table(db2admin.illnesses(" + QString::number(id) + ")) as t", *db);
+    QSqlQuery query(*db);
+    query.setForwardOnly(true);
+    query.prepare("select t.Illness, t.Date_of_admission, t.Date_of_leaving from table(db2admin.illnesses(" + QString::number(id) + ")) as t");
     query.exec();
     qDebug("performig query : %s", qPrintable(query.lastQuery()));
     if(query.lastError().type() != QSqlError::NoError)
@@ -62,7 +68,9 @@ QList<ill> ProcedureCall::illness(int id)
 
 void ProcedureCall::increase_salary(int diff)
 {
-    QSqlQuery query("CALL db2admin.increase_salary("+ QString::number(diff) + ")", *db);
+    QSqlQuery query(*db);
+    query.setForwardOnly(true);
+    query.prepare("CALL db2admin.increase_salary("+ QString::number(diff) + ")");
     query.exec();
     qDebug("performig query : %s", qPrintable(query.lastQuery()));
     if(query.lastError().type() != QSqlError::NoError)
@@ -74,7 +82,9 @@ void ProcedureCall::increase_salary(int diff)
 
 void ProcedureCall::remove_old_contracts()
 {
-    QSqlQuery query("CALL db2admin.remove_old_contracts()", *db);
+    QSqlQuery query(*db);
+    query.setForwardOnly(true);
+    query.prepare("CALL db2admin.remove_old_contracts()");
     query.exec();
     qDebug("performig query : %s", qPrintable(query.lastQuery()));
     if(query.lastError().type() != QSqlError::NoError)
@@ -86,7 +96,9 @@ void ProcedureCall::remove_old_contracts()
 
 void ProcedureCall::remove_empty_medicine()
 {
-    QSqlQuery query("CALL db2admin.remove_empty_medicine()", *db);
+    QSqlQuery query(*db);
+    query.setForwardOnly(true);
+    query.prepare("CALL db2admin.remove_empty_medicine()");
     query.exec();
     qDebug("performig query : %s", qPrintable(query.lastQuery()));
     if(query.lastError().type() != QSqlError::NoError)

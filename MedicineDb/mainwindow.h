@@ -79,6 +79,7 @@ public slots:
     void procces_action20();
     void procces_action21();
     void procces_action22();
+    void procces_action23();
 };
 
 #endif // MAINWINDOW_H
