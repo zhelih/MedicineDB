@@ -328,7 +328,7 @@ public:
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 662, 21));
+        menuBar->setGeometry(QRect(0, 0, 662, 20));
         menu = new QMenu(menuBar);
         menu->setObjectName(QStringLiteral("menu"));
         menu_6 = new QMenu(menu);
@@ -422,7 +422,7 @@ public:
         QObject::connect(action_17, SIGNAL(triggered()), MainWindow, SLOT(procces_action22()));
 
         stackedWidget->setCurrentIndex(0);
-        tabs->setCurrentIndex(0);
+        tabs->setCurrentIndex(6);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
