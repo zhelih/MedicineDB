@@ -2,6 +2,7 @@
 #define PROCEDURECALL_H
 #include <QtSql>
 #include <QtSql/QSqlDatabase>
+#include <QDate>
 
 struct ill
 {
