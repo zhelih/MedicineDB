@@ -13,17 +13,14 @@ void ListDialog::setData(QList<ill> l)
 {
     QList<ill>::Iterator i;
     int j;
-    ui->tableWidget->clearContents();
-    // remove all rows, no auto
-    for(j=0; j < ui->tableWidget->rowCount(); ++j)
-        ui->tableWidget->removeRow(j);
     j=0;
+    ui->tableWidget->setRowCount(l.size());
     for(i=l.begin(); i!=l.end(); ++i,++j)
     {
-        ui->tableWidget->insertRow(ui->tableWidget->rowCount());
-        ui->tableWidget->item(j,0)->setText((*i).illness);
-        ui->tableWidget->item(j,1)->setData(Qt::DisplayRole, (*i).adm);
-        ui->tableWidget->item(j,2)->setData(Qt::DisplayRole, (*i).leave);
+        //ui->tableWidget->insertRow(ui->tableWidget->rowCount());
+        ui->tableWidget->setItem(j,0,new QTableWidgetItem((*i).illness));
+        ui->tableWidget->setItem(j,1,new QTableWidgetItem((*i).adm.toString()));
+        ui->tableWidget->setItem(j,2,new QTableWidgetItem((*i).leave.toString()));
      }
 }
 

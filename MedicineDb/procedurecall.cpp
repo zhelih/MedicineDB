@@ -63,6 +63,7 @@ QList<ill> ProcedureCall::illness(int id)
         i.leave = query.value(2).toDate();
         res.append(i);
     }
+    qDebug("found %d rows", res.size());
     return res;
 }
 
